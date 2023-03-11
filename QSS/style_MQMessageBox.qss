@@ -1,0 +1,8 @@
+QPushButton#pushButton:hover{
+	background-color: rgb(196,43,28);
+}
+QPushButton#pushButton{
+    background-color:transparent ;
+    border:none;
+}
+
