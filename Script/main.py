@@ -33,13 +33,13 @@ from PyQt5.QtCore import (
     QTranslator,
     QTimer,
     QModelIndex,
-    QProcess
 )
 from PyQt5.QtGui import (
     QMouseEvent,
     QPixmap,
     QIcon,
     QCloseEvent,
+    QShowEvent
 )
 from PyQt5.QtMultimedia import QMediaContent, QMediaPlayer
 from PyQt5.QtWidgets import (
@@ -65,6 +65,22 @@ import setting
 from API.EDN import EDNCrypto, English
 from MQMessageBox import Ui_Dialog
 from losder import Losder
+
+
+def right(num, self):
+    return QPoint(main_window.x() + main_window.width(), main_window.y() + num)
+
+
+def left(num, self):
+    return QPoint(main_window.x() - self.width(), main_window.y() + num)
+
+
+def bottom(num, self):
+    return QPoint(main_window.x() + num, main_window.y() - main_window.height())
+
+
+def topmost(num, self):
+    return QPoint(main_window.x() + num, main_window.y() - self.height())
 
 
 class Searchs(QFrame, File_Search.Ui_Form):
@@ -554,6 +570,10 @@ class Video_play(QDialog, Video.Ui_Dialog):
             if a0.button() == Qt.LeftButton:
                 self.showNormal()
 
+    def closeEvent(self, a0: QCloseEvent) -> None:
+        self.player.stop()
+        a0.accept()
+
     def stop_video(self) -> None:
         if self.player.state() == 1:
             self.stop.setIcon(self.icon)
@@ -585,8 +605,8 @@ class Main(QFrame, Mainwindow.Ui_Mainwindow):
     def __init__(self) -> None:
         super().__init__()
         # 无边框
-        self._startPos_music = None
         self._startPos_setting = None
+        self._startPos_music = None
         self._startPos_file_sear = None
         self.is_img = None
         self.filePath = None
@@ -681,8 +701,8 @@ class Main(QFrame, Mainwindow.Ui_Mainwindow):
         self.dn_text.setObjectName("dn_text")
         self.horizontalLayout_4.addWidget(self.dn_text)
 
-        shutil.copyfile(f"{cwd}\\music\\lucky.mp3", music_path + "lucky.mp3")
-        shutil.copyfile(f"{cwd}\\music\\So Cold.mp3", music_path + "So Cold.mp3")
+        shutil.copyfile(f"..\\music\\lucky.mp3", music_path + "lucky.mp3")
+        shutil.copyfile(f"..\\music\\So Cold.mp3", music_path + "So Cold.mp3")
 
         self.Inspirational_.start(int(config["up_time"]))
 
@@ -745,7 +765,7 @@ class Main(QFrame, Mainwindow.Ui_Mainwindow):
             self.file_tuo.setPixmap(QPixmap(":/windows/file_tuo_en.png"))
 
         if text == '简体中文':
-            self.trans.load("QM/Mainwindow_.qm")
+            self.trans.load("..\\QM\\Mainwindow_.qm")
             _app.installTranslator(self.trans)
             # 成功 重启以启动以更新界面
             if language != text:
@@ -1000,12 +1020,14 @@ class Main(QFrame, Mainwindow.Ui_Mainwindow):
     def mouseMoveEvent(self, a0: QMouseEvent) -> None:
         if self._startPos:
             if config["Stitching-window"]:
-                if file_searchs.isVisible():
-                    file_searchs.move(self.pos() + (a0.pos() - self._startPos_file_sear))
-                if sett.isVisible():
-                    sett.move(self.pos() + (a0.pos() - self._startPos_setting))
+
                 if mm.isVisible():
-                    mm.move(self.pos() + (a0.pos() - self._startPos_music))
+                    mm.move(eval(config["music_window"][0])(config["music_window"][1], mm))
+                if file_searchs.isVisible():
+                    file_searchs.move(eval(config["file_window"][0])(config["file_window"][1], file_searchs))
+                if sett.isVisible():
+                    sett.move(eval(config["set_window"][0])(config["set_window"][1], sett))
+
             self.move(self.pos() + (a0.pos() - self._startPos))
 
     # 鼠标按下事件
@@ -1014,9 +1036,6 @@ class Main(QFrame, Mainwindow.Ui_Mainwindow):
             if a0.button() == Qt.LeftButton:
                 self._isTracking = True
                 self._startPos = QPoint(a0.x(), a0.y())
-                self._startPos_file_sear = QPoint(a0.x() + file_searchs.width(), a0.y())
-                self._startPos_setting = QPoint(a0.x(), a0.y() + sett.height())
-                self._startPos_music = QPoint(a0.x(), a0.y() - self.height())
 
     # 松开
     def mouseReleaseEvent(self, a0: QMouseEvent) -> None:
@@ -1048,6 +1067,10 @@ class Main(QFrame, Mainwindow.Ui_Mainwindow):
         self.filePath = e.mimeData().text().split('\n')[0].replace(
             'file:///', '', 1)
 
+    @property
+    def startPos_setting(self):
+        return self._startPos_setting
+
 
 class BarThread(QThread):
     text = pyqtSignal(list)
@@ -1057,7 +1080,7 @@ class BarThread(QThread):
         with open("words_alpha.txt", 'r', encoding='UTF-8') as w:
             a = w.read()
         if not os.path.isfile(English_dict):
-            os.system(f"7z.exe x English/ecdict.7z -p599575461 -o{english_path} -y")
+            os.system(f"7z.exe x info/Box/English/ecdict.7z -p599575461 -o{english_path} -y")
         e_.start()
         self.text.emit(a.split('\n'))
 
@@ -1085,6 +1108,13 @@ class setting_(QFrame, setting.Ui_Settings):
 
         for i in ['English', '简体中文']:
             self.comboBox.addItem(i)
+        self.side = [self.tr('topmost'), self.tr('below'), self.tr("left"), self.tr('right')]
+
+        # 上面 下面 左面 右面
+        for i in self.side:
+            self.comboBox_2.addItem(i)
+            self.comboBox_3.addItem(i)
+            self.comboBox_4.addItem(i)
 
         self.pushButton.clicked.connect(self.re_config)
         self.init()
@@ -1104,6 +1134,13 @@ class setting_(QFrame, setting.Ui_Settings):
         self.checkBox.setChecked(config["Stitching-window"])
         self.spinBox_2.setValue(config["up_time"])
 
+        self.comboBox_2.setCurrentText(config["set_window"][0])
+        self.set_coor.setValue(config["set_window"][1])
+        self.comboBox_3.setCurrentText(config["file_window"][0])
+        self.File_coor.setValue(config["file_window"][1])
+        self.comboBox_4.setCurrentText(config["music_window"][0])
+        self.spinBox_3.setValue(config["music_window"][1])
+
     def re_config(self) -> None:
         file.write_json_file("json/config.json", file.read_json_file("json/config_re.json"))
 
@@ -1118,7 +1155,7 @@ class setting_(QFrame, setting.Ui_Settings):
         languages = self.comboBox.currentText()
         if self.lineEdit.text()[-1] == "\\":
             self.lineEdit.setText(self.lineEdit.text()[:-1])
-        file.write_json_file("json/config.json", {
+        file.write_json_file("..\\json\\config.json", {
             "Language": f"{languages}",
             "English_path": f"{self.lineEdit.text()}",
             "MUSIC": f"{self.lineEdit_2.text()}",
@@ -1128,7 +1165,10 @@ class setting_(QFrame, setting.Ui_Settings):
             "font-family": self.fontComboBox.currentText(),
             "Rotation-speed": int(self.spinBox.text()),
             "Stitching-window": self.checkBox.isChecked(),
-            "up_time": int(self.spinBox_2.text())
+            "up_time": int(self.spinBox_2.text()),
+            "set_window": [self.comboBox_2.currentText(), int(self.set_coor.text())],
+            "file_window": [self.comboBox_3.currentText(), int(self.File_coor.text())],
+            "music_window": [self.comboBox_4.currentText(), int(self.spinBox_3.text())],
         })
 
     def closeEvent(self, a0: QCloseEvent, main=False) -> None:
@@ -1211,18 +1251,18 @@ def rebot() -> None:
     重启
     :return: None
     """
-    app_path = QCoreApplication.applicationFilePath()
-    process = QProcess()
-    process.startDetached(app_path)
-    QCoreApplication.quit()
+    pass
+    # app_path = QCoreApplication.applicationFilePath()
+    # process = QProcess()
+    # process.startDetached(app_path)
+    # QCoreApplication.quit()
 
 
 if __name__ == '__main__':
     app = QApplication(sys.argv)
-
-    file = Losder.Losder()
-    config = file.read_json_file("json/config.json")
     cwd = os.getcwd()
+    file = Losder.Losder()
+    config = file.read_json_file(f"..\\json\\config.json")
 
     language = config["Language"]
     english_path = config["English_path"]
@@ -1232,7 +1272,7 @@ if __name__ == '__main__':
     video_type = config["video_type"]
 
     # 设置QSS
-    main_qss = file.read_qss_file("QSS/Mainwindow.qss") % config["font-family"]
+    main_qss = file.read_qss_file(f"..\\QSS\\Mainwindow.qss") % config["font-family"]
     app.setStyleSheet(main_qss)
 
     # 检测目录

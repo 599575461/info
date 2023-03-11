@@ -1,5 +1,7 @@
 <RCC>
   <qresource prefix="windows">
+    <file>windows_.png</file>
+    <file>routime.png</file>
     <file>file_tuo_en.png</file>
     <file>settings.png</file>
     <file>Text.png</file>

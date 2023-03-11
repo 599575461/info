@@ -45,6 +45,74 @@ QPushButton#start_word:hover{
     background-color:rgb(81,146,200);
 }
 
+QTabBar::tab{
+  border: 2px solid rgba(8, 42, 96, 127);
+  background-color:rgba(78,87,105,127);
+  width:160px; height:40px;
+  font-size:20px;
+  color:#05edfe;
+  font-weight:bold;
+}
+QDockWidget {
+    border: 1px solid red;
+    titlebar-close-icon: url(:/images/111.bmp);
+    titlebar-normal-icon: url(:/images/close.png);
+}
+
+/* 标题设置 */
+QDockWidget::title {
+    text-align: right;
+    background: lightgray;
+    padding-left: 35px;
+}
+
+/* 关闭和显示按钮 */
+QDockWidget::close-button, QDockWidget::float-button {
+    border: 2px solid transparent;
+    background: darkgray;
+    padding: 2px;
+    icon-size: 14px; /* maximum icon size */
+}
+
+/* 鼠标悬浮状态 */
+QDockWidget::close-button:hover, QDockWidget::float-button:hover {
+    background: red;
+}
+
+/* 鼠标按下状态 */
+QDockWidget::close-button:pressed, QDockWidget::float-button:pressed {
+    padding: 1px -1px -1px 1px;
+}
+
+/* 把按钮移到左上角 */
+QDockWidget::close-button {
+    subcontrol-posbelow}
+
+QDockWidget::float-button {
+    subcontrol-position: top left;
+    subcontrol-origin: margin;
+    position: absolute;
+    top: 0px; left: 16px; bottom: 0px;
+    width: 14px;
+}
+QTabBar::tab:selected
+{
+  background-color:rgba(6, 13, 85, 127) ;
+}
+QTabWidget::tab-bar {
+  top:1px;
+}
+QTabWidget::pane
+{
+  background:transparent;
+  border:none;
+}
+QSpinBox{
+    background-color: #4b4b4e;
+    color: #fff;
+    border:none;
+    border-radius:7px;
+}
 QGroupBox{
     border-width:1px;
     border-style:solid;

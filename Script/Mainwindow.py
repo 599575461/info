@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'Mainwindow.ui'
+# Form implementation generated from reading ui file 'D:\python_passage\info\info\Box\UI\Mainwindow.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
@@ -526,7 +526,7 @@ class Ui_Mainwindow(object):
         self.splitter_2.raise_()
 
         self.retranslateUi(Mainwindow)
-        self.functionality.setCurrentIndex(0)
+        self.functionality.setCurrentIndex(3)
         QtCore.QMetaObject.connectSlotsByName(Mainwindow)
         Mainwindow.setTabOrder(self.start_Custom_2, self.conver_)
         Mainwindow.setTabOrder(self.conver_, self.next_)

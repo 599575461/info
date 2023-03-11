@@ -4,12 +4,12 @@
 <context>
     <name>Conver</name>
     <message>
-        <location filename="../Script/main.py" line="129"/>
+        <location filename="../Script/main.py" line="145"/>
         <source>Configuration file</source>
         <translation>配置文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="129"/>
+        <location filename="../Script/main.py" line="145"/>
         <source>Save the configuration file</source>
         <translation>保存配置文件</translation>
     </message>
@@ -102,22 +102,22 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>MUSIC_</name>
     <message>
-        <location filename="../Script/main.py" line="431"/>
+        <location filename="../Script/main.py" line="446"/>
         <source>...</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="431"/>
+        <location filename="../Script/main.py" line="446"/>
         <source>Select the audio file</source>
         <translation>选择音频文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="439"/>
+        <location filename="../Script/main.py" line="454"/>
         <source>Audio files</source>
         <translation>音频文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="439"/>
+        <location filename="../Script/main.py" line="454"/>
         <source>Select the Audio folder</source>
         <translation>选择音频文件夹</translation>
     </message>
@@ -163,37 +163,37 @@ p, li { white-space: pre-wrap; }
 <context>
     <name>Main</name>
     <message>
-        <location filename="../Script/main.py" line="657"/>
+        <location filename="../Script/main.py" line="676"/>
         <source>Text type</source>
         <translation>文本类型</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="657"/>
+        <location filename="../Script/main.py" line="676"/>
         <source>Image type</source>
         <translation>图像类型</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="660"/>
+        <location filename="../Script/main.py" line="679"/>
         <source>Select Encrypt File</source>
         <translation>选择加密文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="666"/>
+        <location filename="../Script/main.py" line="685"/>
         <source>Select Decrypt File</source>
         <translation>选择解密文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="724"/>
+        <location filename="../Script/main.py" line="743"/>
         <source>Configuration file</source>
         <translation>配置文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="724"/>
+        <location filename="../Script/main.py" line="743"/>
         <source>Read the configuration file</source>
         <translation>读取配置文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="761"/>
+        <location filename="../Script/main.py" line="780"/>
         <source>succeed</source>
         <translation>成功</translation>
     </message>
@@ -203,168 +203,168 @@ p, li { white-space: pre-wrap; }
         <translation type="obsolete">重启以刷新界面</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="777"/>
+        <location filename="../Script/main.py" line="796"/>
         <source>There is no content</source>
         <translation>没有内容</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="777"/>
+        <location filename="../Script/main.py" line="796"/>
         <source>You did not enter any characters
 You can enter /file/text/directory</source>
         <translation>您未输入任何字符\n您可以输入 (/文件/文本/目录)</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="782"/>
+        <location filename="../Script/main.py" line="801"/>
         <source>It cannot be done at the same time</source>
         <translation>不能同时进行</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="782"/>
+        <location filename="../Script/main.py" line="801"/>
         <source>You cannot encrypt and decrypt at the same time</source>
         <translation>不能同时进行加密和解密</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="787"/>
+        <location filename="../Script/main.py" line="806"/>
         <source>Too long</source>
         <translation>太长</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="787"/>
+        <location filename="../Script/main.py" line="806"/>
         <source>Text is too long
 It is recommended to write to a txt file</source>
         <translation>文本过于长\n建议写入txt文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="812"/>
+        <location filename="../Script/main.py" line="831"/>
         <source>File not found
 </source>
         <translation>未找到文件
 </translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="815"/>
+        <location filename="../Script/main.py" line="834"/>
         <source>Successful encryption
 </source>
         <translation>成功加密
 </translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="881"/>
+        <location filename="../Script/main.py" line="900"/>
         <source>Text replacement successfully
 </source>
         <translation>成功替换文本
 </translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="897"/>
+        <location filename="../Script/main.py" line="916"/>
         <source>Converted</source>
         <translation>已将</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="843"/>
+        <location filename="../Script/main.py" line="862"/>
         <source>encrypt
 </source>
         <translation>加密
 </translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="852"/>
+        <location filename="../Script/main.py" line="871"/>
         <source>The ciphertext succeeded
 </source>
         <translation>解密文本成功
 </translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="908"/>
+        <location filename="../Script/main.py" line="927"/>
         <source>The input format is incorrect
 </source>
         <translation>输入格式不正确
 </translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="897"/>
+        <location filename="../Script/main.py" line="916"/>
         <source>decrypt
 </source>
         <translation>解密
 </translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="923"/>
+        <location filename="../Script/main.py" line="942"/>
         <source>Succeed!</source>
         <translation>成功！</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="923"/>
+        <location filename="../Script/main.py" line="942"/>
         <source>Initialization dictionary successful!</source>
         <translation>初始化词典成功！</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="941"/>
+        <location filename="../Script/main.py" line="960"/>
         <source>&lt;strong&gt;Word:&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;单词:&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="942"/>
+        <location filename="../Script/main.py" line="961"/>
         <source>&lt;strong&gt;Phonetic transcription:&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;音标:&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="943"/>
+        <location filename="../Script/main.py" line="962"/>
         <source>&lt;strong&gt;Explanation:&lt;/strong&gt;</source>
         <translation>&lt;strong&gt;解释:&lt;/strong&gt;</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="950"/>
+        <location filename="../Script/main.py" line="969"/>
         <source>An error occurred</source>
         <translation>出现错误</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="950"/>
+        <location filename="../Script/main.py" line="969"/>
         <source>Thesaurus loss</source>
         <translation>词库损失</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="961"/>
+        <location filename="../Script/main.py" line="980"/>
         <source>Please wait</source>
         <translation>请稍等</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="961"/>
+        <location filename="../Script/main.py" line="980"/>
         <source>Initializing thesaurus</source>
         <translation>正在初始化词库</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="980"/>
+        <location filename="../Script/main.py" line="999"/>
         <source>Audio files</source>
         <translation>音频文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="980"/>
+        <location filename="../Script/main.py" line="999"/>
         <source>Video files</source>
         <translation>视频文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="980"/>
+        <location filename="../Script/main.py" line="999"/>
         <source>Select the file</source>
         <translation>选择文件</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="988"/>
+        <location filename="../Script/main.py" line="1007"/>
         <source>Quit?</source>
         <translation>退出?</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="988"/>
+        <location filename="../Script/main.py" line="1007"/>
         <source>Do you confirm your exit?</source>
         <translation>你确认退出?</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="913"/>
+        <location filename="../Script/main.py" line="932"/>
         <source>Decrypting the text successfully</source>
         <translation>解密文本成功</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="761"/>
+        <location filename="../Script/main.py" line="780"/>
         <source>The settings are saved successfully Reboot to launch to update the interface</source>
         <translation>设置保存成功，重启以刷新</translation>
     </message>
@@ -560,12 +560,12 @@ It is recommended to write to a txt file</source>
 <context>
     <name>Many</name>
     <message>
-        <location filename="../Script/main.py" line="360"/>
+        <location filename="../Script/main.py" line="375"/>
         <source>No connected to the Internet</source>
         <translation>未联网</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="360"/>
+        <location filename="../Script/main.py" line="375"/>
         <source>It has been detected that you are not connected to the Internet, please try again after connecting to the Internet</source>
         <translation>你没有联网，请联网后重启软件</translation>
     </message>
@@ -573,37 +573,37 @@ It is recommended to write to a txt file</source>
 <context>
     <name>MoreInfo</name>
     <message>
-        <location filename="../Script/main.py" line="216"/>
+        <location filename="../Script/main.py" line="231"/>
         <source>plural</source>
         <translation>复数</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="216"/>
+        <location filename="../Script/main.py" line="231"/>
         <source>present participle</source>
         <translation>现在分词</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="216"/>
+        <location filename="../Script/main.py" line="231"/>
         <source>past participle</source>
         <translation>过去分词</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="217"/>
+        <location filename="../Script/main.py" line="232"/>
         <source>Three singles</source>
         <translation>三单</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="217"/>
+        <location filename="../Script/main.py" line="232"/>
         <source>Once passed</source>
         <translation>三单</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="217"/>
+        <location filename="../Script/main.py" line="232"/>
         <source>comparative</source>
         <translation>比较级</translation>
     </message>
     <message>
-        <location filename="../Script/main.py" line="218"/>
+        <location filename="../Script/main.py" line="233"/>
         <source>superlative</source>
         <translation>最高级</translation>
     </message>
@@ -611,74 +611,119 @@ It is recommended to write to a txt file</source>
 <context>
     <name>Settings</name>
     <message>
-        <location filename="../Script/setting.py" line="153"/>
+        <location filename="../Script/setting.py" line="242"/>
         <source>Setting</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="154"/>
+        <location filename="../Script/setting.py" line="243"/>
         <source>Set</source>
         <translation>设置</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="155"/>
+        <location filename="../Script/setting.py" line="245"/>
         <source>Language</source>
         <translation>语言</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="161"/>
+        <location filename="../Script/setting.py" line="251"/>
         <source>English FIle</source>
         <translation>英语文件</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="157"/>
+        <location filename="../Script/setting.py" line="247"/>
         <source>Music FIle</source>
         <translation>音频文件</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="156"/>
+        <location filename="../Script/setting.py" line="246"/>
         <source>C:\Tools</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="160"/>
+        <location filename="../Script/setting.py" line="250"/>
         <source>C:\Tools\MUSIC\</source>
         <translation></translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="164"/>
+        <location filename="../Script/setting.py" line="254"/>
         <source>Rotation speed</source>
         <translation>旋转速度</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="159"/>
+        <location filename="../Script/setting.py" line="249"/>
         <source>Main Font family</source>
         <translation>主要字体</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="162"/>
+        <location filename="../Script/setting.py" line="252"/>
         <source>Audio Types</source>
         <translation>音频类型</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="163"/>
+        <location filename="../Script/setting.py" line="253"/>
         <source>Video Types</source>
         <translation>视频类型</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="165"/>
+        <location filename="../Script/setting.py" line="255"/>
         <source>Stitching window</source>
         <translation>拼接窗口</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="158"/>
+        <location filename="../Script/setting.py" line="248"/>
         <source>refresh time</source>
         <translation>刷新时间</translation>
     </message>
     <message>
-        <location filename="../Script/setting.py" line="166"/>
+        <location filename="../Script/setting.py" line="244"/>
         <source>Reset Set</source>
         <translation>重置设置</translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="256"/>
+        <source>Routine</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="257"/>
+        <source>Set Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="264"/>
+        <source>Located in the main window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="265"/>
+        <source>Increased coordinates</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="260"/>
+        <source>File Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="263"/>
+        <source>Music Window</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="266"/>
+        <source>Video tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="267"/>
+        <source>Docx tutorial</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/setting.py" line="268"/>
+        <source>Windows</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 <context>
@@ -702,6 +747,29 @@ It is recommended to write to a txt file</source>
         <location filename="../Script/info.py" line="70"/>
         <source>❌</source>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>setting_</name>
+    <message>
+        <location filename="../Script/main.py" line="1111"/>
+        <source>topmost</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/main.py" line="1111"/>
+        <source>below</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/main.py" line="1111"/>
+        <source>left</source>
+        <translation type="unfinished"></translation>
+    </message>
+    <message>
+        <location filename="../Script/main.py" line="1111"/>
+        <source>right</source>
+        <translation type="unfinished"></translation>
     </message>
 </context>
 </TS>

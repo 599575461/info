@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file 'UI\MUSIC.ui'
+# Form implementation generated from reading ui file 'D:\python_passage\info\info\Box\UI\MUSIC.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.9
 #
